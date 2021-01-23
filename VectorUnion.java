@@ -2,16 +2,22 @@
  *This program will use Java to take two assigned vectors and 
  *give their union.  It ensures that if either vector has a duplicate 
  *item, it is NOT repeated in the union.
+ *There are two methods defined in the program.  A method, union, to create the 
+ *union, which has two vector arguments and a method, outputVector which has
+ *an iterator for the union vector and an integer for the test case number.
  */
-package vectorunion;
+package vectorunion1;
 import java.util.Vector;
 import java.util.Iterator;
 
-public class VectorUnion {
+public class VectorUnion1 {
  
     public static void main(String[] args) {
   
         //Test Case 1.
+        
+       Integer testCase = 1;
+        
     // Trial Vector a
     Vector<Object> a = new Vector<Object>();
     a.add(1);
@@ -24,21 +30,16 @@ public class VectorUnion {
     b.add(6);
 
     Vector<Object> unionVect = union(a, b);
-  
+
 //Initializes an iterator for the unionVector.
     Iterator it = unionVect.iterator();
-    	System.out.println("The union vector for test case 1 is: ");
-        System.out.print("[");
-//This loop prints the union vector to see if it is correct.
-    while (it.hasNext())
-        {
-        System.out.print(it.next());
-        System.out.print(",");
-        }
-        System.out.print("]");
-        System.out.println();
+    
+    outputVector (it, testCase);
 
-        //Test Case 2.
+    //Test Case 2.
+    
+    testCase = 2;
+    
      // Trial Vector c
     Vector<Object> c = new Vector<Object>();
     c.add(1);
@@ -54,18 +55,11 @@ public class VectorUnion {
   
 //Initializes an iterator for the unionVector in test case 2.
     it = unionVect.iterator();
-    	System.out.println("The union vector for test case 2 is: ");
-        System.out.print("[");
-//This loop prints the union vector to see if it is correct.
-    while (it.hasNext())
-        {
-        System.out.print(it.next());
-        System.out.print(",");
-        }
-        System.out.print("]");
-        System.out.println();
+    
+    outputVector (it, testCase);
 
-        //Test Case 3.
+    //Test Case 3.
+    testCase = 3;
    // Trial Vector e
     Vector<Object> e = new Vector<Object>();
     e.add('a');
@@ -79,18 +73,13 @@ public class VectorUnion {
   
 //Initializes an iterator for the unionVector for test case 3.
     it = unionVect.iterator();
-    	System.out.println("The union vector for test case 3 is: ");
-        System.out.print("[");
-//This loop prints the union vector to see if it is correct.
-    while (it.hasNext())
-        {
-        System.out.print(it.next());
-        System.out.print(",");
-        }
-        System.out.print("]");
-        System.out.println();
+    
+    outputVector (it, testCase);
         
-         //Test Case 4.
+    //Test Case 4.
+         
+    testCase = 4;
+    
     // Trial Vector g
     Vector<Object> g = new Vector<Object>();
     g.add('a');
@@ -104,18 +93,13 @@ public class VectorUnion {
   
 //Initializes an iterator for the unionVector for test case 4.
     it = unionVect.iterator();
-    	System.out.println("The union vector for test case 4 is: ");
-        System.out.print("[");
-//This loop prints the union vector to see if it is correct.
-    while (it.hasNext())
-        {
-        System.out.print(it.next());
-        System.out.print(",");
-        }
-        System.out.print("]");
-        System.out.println();
-        
-         //Test Case 5.
+    
+    outputVector (it, testCase);
+
+    //Test Case 5.
+         
+    testCase = 5;
+    
     // Trial Vector i
     Vector<Object> i = new Vector<Object>();
 
@@ -127,18 +111,13 @@ public class VectorUnion {
   
 //Initializes an iterator for the unionVector for test case 5.
     it = unionVect.iterator();
-    	System.out.println("The union vector for test case 5 is: ");
-        System.out.print("[");
-//This loop prints the union vector to see if it is correct.
-    while (it.hasNext())
-        {
-        System.out.print(it.next());
-        System.out.print(",");
-        }
-        System.out.print("]");
-        System.out.println();
-
-         //Test Case 6.
+    
+    outputVector (it, testCase);
+    
+    
+    //Test Case 6.
+    testCase = 6;
+    
     // Trial Vector k
     Vector<Object> k = new Vector<Object>();
     k.add('a');
@@ -152,18 +131,13 @@ public class VectorUnion {
   
 //Initializes an iterator for the unionVector test case 6.
     it = unionVect.iterator();
-    	System.out.println("The union vector for test case 6 is: ");
-        System.out.print("[");
-//This loop prints the union vector to see if it is correct.
-    while (it.hasNext())
-        {
-        System.out.print(it.next());
-        System.out.print(",");
-        }
-        System.out.print("]");
-        System.out.println();
-
-         //Test Case 7.
+    
+    outputVector (it, testCase);
+    
+    //Test Case 7.
+         
+    testCase = 7;
+    
     // Trial Vector n
     Vector<Object> n = new Vector<Object>();
     n.add('a');
@@ -180,18 +154,13 @@ public class VectorUnion {
   
 //Initializes an iterator for the unionVector for test case 7.
     it = unionVect.iterator();
-    	System.out.println("The union vector for test case 7 is: ");
-        System.out.print("[");
-//This loop prints the union vector to see if it is correct.
-    while (it.hasNext())
-        {
-        System.out.print(it.next());
-        System.out.print(",");
-        }
-        System.out.print("]");
-        System.out.println();
+ 
+    outputVector (it, testCase);
         
-        //Test Case 8.
+    //Test Case 8.
+        
+    testCase = 8;
+    
     // Trial Vector q
     Vector<Object> q = new Vector<Object>();
     q.add(1);
@@ -217,18 +186,13 @@ public class VectorUnion {
   
 //Initializes an iterator for the unionVector for test case 8.
     it = unionVect.iterator();
-    	System.out.println("The union vector for test case 8 is: ");
-        System.out.print("[");
-//This loop prints the union vector to see if it is correct.
-    while (it.hasNext())
-        {
-        System.out.print(it.next());
-        System.out.print(",");
-        }
-        System.out.print("]");
-        System.out.println();
+     
+    outputVector (it, testCase);
         
-         //Test Case 9.
+    //Test Case 9.
+    
+    testCase = 9;
+
     // Trial Vector u
     Vector<Object> u = new Vector<Object>();
 
@@ -239,18 +203,14 @@ public class VectorUnion {
     
 //Initializes an iterator for the unionVector for test case 9.
     it = unionVect.iterator();
-    	System.out.println("The union vector for test case 9 is: ");
-        System.out.print("[");
-//This loop prints the union vector to see if it is correct.
-    while (it.hasNext())
-        {
-        System.out.print(it.next());
-        System.out.print(",");
-        }
-        System.out.print("]");
-        System.out.println();
+    
+    outputVector (it, testCase);
+
         
-        //Test Case 10.
+    //Test Case 10.
+    
+    testCase = 10;
+    
     // Trial Vector w
     Vector<Object> w = new Vector<Object>();
     w.add("Ford");
@@ -272,16 +232,8 @@ public class VectorUnion {
     
 //Initializes an iterator for the unionVector for test case 10.
     it = unionVect.iterator();
-    	System.out.println("The union vector for test case 10 is: ");
-        System.out.print("[");
-//This loop prints the union vector to see if it is correct.
-    while (it.hasNext())
-        {
-        System.out.print(it.next());
-        System.out.print(",");
-        }
-        System.out.print("]");
-        System.out.println();
+    
+    outputVector (it, testCase);
 }
     
 
@@ -323,4 +275,27 @@ public static Vector union(Vector a, Vector b) {
   //Returns the finished union vector.
     return uVect;
 }
+
+//************** Start of Java Method, outputVector *************************
+
+public static void outputVector (Iterator it, Integer n) {
+
+//Initializes an iterator for the unionVector for test case n.
+
+    	System.out.println("The union vector for test case " + n + " is: ");
+        System.out.print("[");
+        
+//This loop prints the union vector to see if it is correct.
+    while (it.hasNext())
+        {
+        System.out.print(it.next());
+                if (it.hasNext())
+                {
+                System.out.print(",");
+                };
+        }
+        System.out.print("]");
+        System.out.println();
+}
+    
 }
