@@ -1,5 +1,6 @@
 /*
- *This program will use Java to take two assigned vectors and 
+ *This program written by Paul Court for SE 670 for Dr. Omar Al-Azzam
+ *will use Java to take two assigned vectors and 
  *give their union.  It ensures that if either vector has a duplicate 
  *item, it is NOT repeated in the union.
  *There are two methods defined in the program.  A method, union, to create the 
